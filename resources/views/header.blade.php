@@ -21,12 +21,12 @@ if (Session::has('user')) {
           <span class="glyphicon glyphicon-bullhorn"> </span>
           My Shop</a>
       </div>
-  
+
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class="active"><a href="/">Home</a></li>
-          <li><a href="/myorders">Orders</a></li>
+          <li><a href="/myorders">Order</a></li>
         </ul>
         <form action="/search" class="navbar-form navbar-left">
           <div class="form-group">
@@ -40,15 +40,15 @@ if (Session::has('user')) {
             <li class="dropdown">
 
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <span class="glyphicon glyphicon-user" aria-hidden="true"></span> 
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                 {{Session::get('user')['name']}}
               <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a></li>
-          
+
               </ul>
             </li>
-            @else 
+            @else
             <li><a href="/login"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Login</a></li>
             <li><a href="/register"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Register</a></li>
 
@@ -56,4 +56,4 @@ if (Session::has('user')) {
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
-  </nav> 
+  </nav>
